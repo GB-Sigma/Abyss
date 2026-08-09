@@ -42,7 +42,7 @@ local Abyss = {}
 Abyss.Appearance = {
     Title = "Abyss Hub",
     Subtitle = "Enter your key to continue",
-    Icon = "rbxassetid://95721401302279",
+    Icon = "rbxassetid://73269957566415",
     IconSize = UDim2.new(0, 30, 0, 30)
 }
 
