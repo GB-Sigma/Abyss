@@ -69,21 +69,21 @@ Abyss.Options = {
 
 -- theme
 Abyss.Theme = {
-    Accent = Color3.fromRGB(139, 0, 0),
-    AccentHover = Color3.fromRGB(170, 20, 20),
-    Background = Color3.fromRGB(15, 15, 15),
-    Header = Color3.fromRGB(20, 20, 20),
-    Input = Color3.fromRGB(25, 25, 25),
-    Text = Color3.fromRGB(255, 255, 255),
-    TextDim = Color3.fromRGB(120, 120, 120),
-    Success = Color3.fromRGB(50, 205, 110),
-    Error = Color3.fromRGB(245, 70, 90),
-    Warning = Color3.fromRGB(255, 180, 50),
-    StatusIdle = Color3.fromRGB(180, 80, 80),
+    Accent = Color3.fromRGB(45, 125, 220),
+    AccentHover = Color3.fromRGB(65, 145, 240),
+    Background = Color3.fromRGB(12, 16, 22),
+    Header = Color3.fromRGB(17, 23, 31),
+    Input = Color3.fromRGB(22, 29, 39),
+    Text = Color3.fromRGB(240, 244, 250),
+    TextDim = Color3.fromRGB(135, 148, 165),
+    Success = Color3.fromRGB(55, 205, 120),
+    Error = Color3.fromRGB(235, 75, 90),
+    Warning = Color3.fromRGB(245, 175, 60),
+    StatusIdle = Color3.fromRGB(90, 115, 145),
     Discord = Color3.fromRGB(88, 101, 242),
     DiscordHover = Color3.fromRGB(114, 137, 218),
-    Divider = Color3.fromRGB(45, 45, 70),
-    Pending = Color3.fromRGB(60, 60, 60)
+    Divider = Color3.fromRGB(38, 52, 70),
+    Pending = Color3.fromRGB(55, 65, 80)
 }
 
 -- callbacks
