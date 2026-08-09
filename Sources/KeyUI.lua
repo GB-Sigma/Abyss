@@ -116,7 +116,7 @@ local Internal = {
     IconsLoaded = false
 }
 
-local IconBaseURL = "https://raw.githubusercontent.com/DuxiiT/Abyss/main/Sources/KeyIcons/"
+local IconBaseURL = "https://raw.githubusercontent.com/Cobruhehe/expert-octo-doodle/main/Icons/"
 local IconFiles = {
     key = "lucide--key.png",
     shield = "lucide--shield-minus.png",
