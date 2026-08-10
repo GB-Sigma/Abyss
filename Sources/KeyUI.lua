@@ -15,8 +15,6 @@
                                                                            
 ]]
 
-repeat task.wait() until game:IsLoaded()
-
 local cloneref = cloneref or function(obj) return obj end
 local gethui = gethui or function() return cloneref(game:GetService("CoreGui")) end
 
@@ -31,10 +29,10 @@ local Players = cloneref(game:GetService("Players"))
 
 local hui = gethui()
 
-if getgenv().AbyssLoaded and hui:FindFirstChild("AbyssKeySystem") then return getgenv().Abyss end
-if getgenv().AbyssLoaded and hui:FindFirstChild("AbyssKeylessSystem") then return getgenv().Abyss end
-getgenv().AbyssLoaded = true
-getgenv().AbyssClosed = false
+if getgenv().AbyssKeySysLoaded and hui:FindFirstChild("AbyssKeySystem") then return getgenv().Abyss end
+if getgenv().AbyssKeySysLoaded and hui:FindFirstChild("AbyssKeylessSystem") then return getgenv().Abyss end
+getgenv().getgenv().AbyssKeySysLoaded = true
+getgenv().AbyssKeySysClosed = false
 
 local Abyss = {}
 
@@ -359,8 +357,8 @@ local function disableBlur()
 end
 
 local function fullCleanup()
-    getgenv().AbyssLoaded = false
-    getgenv().AbyssClosed = true
+    getgenv().AbyssKeySysLoaded = false
+    getgenv().AbyssKeySysClosed = true
     disableBlur()
     local gui1 = hui:FindFirstChild("AbyssKeySystem")
     local gui2 = hui:FindFirstChild("AbyssKeylessSystem")
@@ -1412,7 +1410,7 @@ end
 
 local function handleKeylessSkip()
     getgenv().SCRIPT_KEY = "KEYLESS"
-    getgenv().AbyssLoaded = false
+    getgenv().AbyssKeySysLoaded = false
     Abyss:Notify("Access Granted", "Keyless access approved!", 3, "success")
     task.wait(0.3)
     if Abyss.Callbacks.OnSuccess then Abyss.Callbacks.OnSuccess() end
@@ -1782,7 +1780,7 @@ local function BuildKeylessUI()
     launchBtn.MouseButton1Click:Connect(function()
         Abyss:Notify("Launching", "Script loaded successfully!", 2, "success")
         getgenv().SCRIPT_KEY = "KEYLESS"
-        getgenv().AbyssLoaded = false
+        getgenv().AbyssKeySysLoaded = false
         closeDoorsThenExit(function()
             disableBlur()
             TweenService:Create(container, TweenInfo.new(0.4, Enum.EasingStyle.Quart), {Position = UDim2.new(0.5, 0, -0.5, 0)}):Play()
@@ -2340,7 +2338,7 @@ local function BuildKeyUI()
         end
         redeemBtn.Active = true
         if valid then
-            saveKey(key) getgenv().SCRIPT_KEY = key getgenv().AbyssLoaded = false
+            saveKey(key) getgenv().SCRIPT_KEY = key getgenv().AbyssKeySysLoaded = false
             setStatus("success") Abyss:Notify("Success", "Key validated successfully!", 2, "success") task.wait(1)
             closeDoorsThenExit(function()
                 disableBlur()
@@ -2389,7 +2387,7 @@ function Abyss:Launch()
         end
         getgenv().SCRIPT_KEY = nil
     end
-    getgenv().AbyssClosed = false
+    getgenv().AbyssKeySysClosed = false
     EnsureIconsReady(function()
         if Abyss.Options.Keyless == true then
             if Abyss.Options.KeylessUI == false then handleKeylessSkip() return end
@@ -2421,7 +2419,7 @@ function Abyss:LaunchJunkie(config)
         Abyss:Notify("Executed", "Script loaded successfully!", 2, "success")
         if Abyss.Callbacks.OnSuccess then Abyss.Callbacks.OnSuccess() end return
     end
-    getgenv().AbyssClosed = false
+    getgenv().AbyssKeySysClosed = false
     EnsureIconsReady(function()
         local success, Junkie = pcall(function() return loadstring(game:HttpGet("https://jnkie.com/sdk/library.lua"))() end)
         if not success or not Junkie then Abyss:Notify("Error", "Failed to load Junkie SDK", 5, "error") return end
