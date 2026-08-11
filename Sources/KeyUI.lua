@@ -1267,18 +1267,8 @@ local function CreateUserInfoPanel(parent, windowWidth, panelHeight, panelWidth,
     divider2.AnchorPoint = Vector2.new(0.5, 0)
     divider2.BackgroundColor3 = Abyss.Theme.Divider
     divider2.BorderSizePixel = 0
-    divider2.LayoutOrder = 6
+    divider2.LayoutOrder = 8
     divider2.Parent = contentFrame
-
-
-    local divider3 = Instance.new("Frame")
-    divider3.Size = UDim2.new(1, 16, 0, 2)
-    divider3.Position = UDim2.new(0.5, 0, 0, 0)
-    divider3.AnchorPoint = Vector2.new(0.5, 0)
-    divider3.BackgroundColor3 = Abyss.Theme.Divider
-    divider3.BorderSizePixel = 0
-    divider3.LayoutOrder = 8
-    divider3.Parent = contentFrame
 
     local clockContainer = Instance.new("Frame")
     clockContainer.Size = UDim2.new(1, 0, 0, isCompact and 30 or 38)
