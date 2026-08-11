@@ -114,20 +114,20 @@ local Internal = {
     IconsLoaded = false
 }
 
-local IconBaseURL = "https://raw.githubusercontent.com/Cobruhehe/expert-octo-doodle/main/Icons/"
+local IconBaseURL = "https://raw.githubusercontent.com/GB-Sigma/Abyss/main/Sources/Icons/"
 local IconFiles = {
-    key = "lucide--key.png",
-    shield = "lucide--shield-minus.png",
-    check = "prime--check-square.png",
-    copy = "flowbite--clipboard-outline.png",
-    discord = "qlementine-icons--discord-16.png",
-    alert = "mdi--alert-octagon-outline.png",
-    lock = "lucide--user-lock.png",
-    loading = "nonicons--loading-16.png",
+    key = "lucide-key.png",
+    shield = "lucide-shield-minus.png",
+    check = "prime-check-square.png",
+    copy = "flowbite-clipboard-outline.png",
+    discord = "qlementine-icons-discord-16.png",
+    alert = "mdi-alert-octagon-outline.png",
+    lock = "lucide-user-lock.png",
+    loading = "nonicons-loading-16.png",
     close = "material-symbols--dangerous-outline.png",
     changelog = "ant-design--sync-outlined.png",
-    logo = "rrjlGmac.png",
-    user = "U.png",
+    logo = "Abyss.png",
+    user = "User.png",
     clock = "Clock.png",
     cart = "Cart.png"
 }
