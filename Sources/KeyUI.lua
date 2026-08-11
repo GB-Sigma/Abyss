@@ -1270,56 +1270,6 @@ local function CreateUserInfoPanel(parent, windowWidth, panelHeight, panelWidth,
     divider2.LayoutOrder = 6
     divider2.Parent = contentFrame
 
-    local hwidContainer = Instance.new("Frame")
-    hwidContainer.Size = UDim2.new(1, 0, 0, fieldHeight)
-    hwidContainer.BackgroundTransparency = 1
-    hwidContainer.LayoutOrder = 7
-    hwidContainer.Parent = contentFrame
-
-    local hwidTitle = Instance.new("TextLabel")
-    hwidTitle.Size = UDim2.new(1, 0, 0, 11)
-    hwidTitle.BackgroundTransparency = 1
-    hwidTitle.Text = "HWID"
-    hwidTitle.TextColor3 = Abyss.Theme.TextDim
-    hwidTitle.TextSize = titleSize
-    hwidTitle.Font = Enum.Font.ArimoBold
-    hwidTitle.TextXAlignment = Enum.TextXAlignment.Left
-    hwidTitle.Parent = hwidContainer
-
-    local fullHWID = getHWID()
-    local copyBtnSize = 18
-    local dotAreaWidth = panelWidth - 16 - copyBtnSize - 6
-    local hiddenDots = generateHiddenDots(dotAreaWidth, 5)
-
-    local hwidValue = Instance.new("TextLabel")
-    hwidValue.Size = UDim2.new(1, -(copyBtnSize + 6), 0, 14)
-    hwidValue.Position = UDim2.new(0, 0, 0, 11)
-    hwidValue.BackgroundTransparency = 1
-    hwidValue.Text = hiddenDots
-    hwidValue.TextColor3 = Abyss.Theme.TextDim
-    hwidValue.TextSize = isCompact and 9 or 10
-    hwidValue.Font = Enum.Font.ArimoBold
-    hwidValue.TextXAlignment = Enum.TextXAlignment.Left
-    hwidValue.TextTruncate = Enum.TextTruncate.AtEnd
-    hwidValue.Parent = hwidContainer
-
-    local copyBtn = Instance.new("ImageButton")
-    copyBtn.Size = UDim2.new(0, copyBtnSize, 0, copyBtnSize)
-    copyBtn.Position = UDim2.new(1, 0, 0.5, 1)
-    copyBtn.AnchorPoint = Vector2.new(1, 0.5)
-    copyBtn.BackgroundTransparency = 1
-    copyBtn.Image = getIcon("copy")
-    copyBtn.ImageColor3 = Abyss.Theme.TextDim
-    copyBtn.ScaleType = Enum.ScaleType.Fit
-    copyBtn.Parent = hwidContainer
-    copyBtn.MouseEnter:Connect(function() TweenService:Create(copyBtn, TweenInfo.new(0.15), {ImageColor3 = Abyss.Theme.Accent}):Play() end)
-    copyBtn.MouseLeave:Connect(function() TweenService:Create(copyBtn, TweenInfo.new(0.15), {ImageColor3 = Abyss.Theme.TextDim}):Play() end)
-    copyBtn.MouseButton1Click:Connect(function()
-        pcall(function() setclipboard(fullHWID) end)
-        TweenService:Create(copyBtn, TweenInfo.new(0.1), {ImageColor3 = Abyss.Theme.Success}):Play()
-        task.delay(0.3, function() TweenService:Create(copyBtn, TweenInfo.new(0.15), {ImageColor3 = Abyss.Theme.TextDim}):Play() end)
-        Abyss:Notify("Copied", "HWID copied to clipboard", 2, "copy")
-    end)
 
     local divider3 = Instance.new("Frame")
     divider3.Size = UDim2.new(1, 16, 0, 2)
