@@ -40,7 +40,7 @@ local Abyss = {}
 Abyss.Appearance = {
     Title = "Abyss Hub",
     Subtitle = "Enter your key to continue",
-    Icon = "rbxassetid://73269957566415",
+    Icon = "rbxassetid://122133446845139",
     IconSize = UDim2.new(0, 30, 0, 30)
 }
 
@@ -67,21 +67,21 @@ Abyss.Options = {
 
 -- theme
 Abyss.Theme = {
-    Accent = Color3.fromRGB(45, 125, 220),
-    AccentHover = Color3.fromRGB(65, 145, 240),
-    Background = Color3.fromRGB(12, 16, 22),
-    Header = Color3.fromRGB(17, 23, 31),
-    Input = Color3.fromRGB(22, 29, 39),
-    Text = Color3.fromRGB(240, 244, 250),
-    TextDim = Color3.fromRGB(135, 148, 165),
-    Success = Color3.fromRGB(55, 205, 120),
-    Error = Color3.fromRGB(235, 75, 90),
-    Warning = Color3.fromRGB(245, 175, 60),
-    StatusIdle = Color3.fromRGB(90, 115, 145),
+    Accent = Color3.fromRGB(139, 0, 0),
+    AccentHover = Color3.fromRGB(170, 20, 20),
+    Background = Color3.fromRGB(15, 15, 15),
+    Header = Color3.fromRGB(20, 20, 20),
+    Input = Color3.fromRGB(25, 25, 25),
+    Text = Color3.fromRGB(255, 255, 255),
+    TextDim = Color3.fromRGB(120, 120, 120),
+    Success = Color3.fromRGB(50, 205, 110),
+    Error = Color3.fromRGB(245, 70, 90),
+    Warning = Color3.fromRGB(255, 180, 50),
+    StatusIdle = Color3.fromRGB(180, 80, 80),
     Discord = Color3.fromRGB(88, 101, 242),
     DiscordHover = Color3.fromRGB(114, 137, 218),
-    Divider = Color3.fromRGB(38, 52, 70),
-    Pending = Color3.fromRGB(55, 65, 80)
+    Divider = Color3.fromRGB(45, 45, 70),
+    Pending = Color3.fromRGB(60, 60, 60)
 }
 
 -- callbacks
@@ -143,14 +143,14 @@ local FallbackIcons = {
     loading = "rbxassetid://116535712789945",
     close = "rbxassetid://6022668916",
     changelog = "rbxassetid://138133190015277",
-    logo = "rbxassetid://73269957566415",
+    logo = "rbxassetid://122133446845139",
     user = "rbxassetid://77400125196692",
     clock = "rbxassetid://87505349362628",
     cart = "rbxassetid://114754518183872"
 }
 
 local CachedIcons = {}
-local FolderName = "Abyss Hub"
+local FolderPath = "Rayfield/Configurations/Abyss Hub"
 local IconsFolder = "Icons"
 local DefaultLogoAsset = "rbxassetid://95721401302279"
 
@@ -175,7 +175,7 @@ end
 local fileSystemSupported = hasFileSystem()
 
 local function getFileName()
-    return FolderName .. "/" .. Abyss.Storage.FileName .. ".txt"
+    return FolderPath .. "/" .. Abyss.Storage.FileName .. ".txt"
 end
 
 local function saveKey(key)
@@ -201,14 +201,14 @@ end
 local function ensureFolders()
     if not fileSystemSupported then return false end
     pcall(function()
-        if not isfolder(FolderName) then makefolder(FolderName) end
-        if not isfolder(FolderName .. "/" .. IconsFolder) then makefolder(FolderName .. "/" .. IconsFolder) end
+        if not isfolder(FolderPath) then makefolder(FolderPath) end
+        if not isfolder(FolderPath .. "/" .. IconsFolder) then makefolder(FolderPath .. "/" .. IconsFolder) end
     end)
     return true
 end
 
 local function getIconPath(iconName)
-    return FolderName .. "/" .. IconsFolder .. "/" .. IconFiles[iconName]
+    return FolderPath .. "/" .. IconsFolder .. "/" .. IconFiles[iconName]
 end
 
 local function isIconCached(iconName)
