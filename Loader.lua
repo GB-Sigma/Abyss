@@ -5,7 +5,7 @@ getgenv().AbyssHubLoaded = true
 local StarterGui = game:GetService("StarterGui")
 
 local Games = {
-    [9280810829] = "",
+    [9280810829] = "c2f1471564a22761fe4a7718d490839b90dc6fa2f2eaced737ee0143ff9f3ae6",
 }
 
 local BaseURL = "https://api.jnkie.com/api/v1/luascripts/public/%s/download"
