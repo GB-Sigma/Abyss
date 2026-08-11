@@ -40,7 +40,7 @@ local Abyss = {}
 Abyss.Appearance = {
     Title = "Abyss Hub",
     Subtitle = "Enter your key to continue",
-    Icon = "rbxassetid://122133446845139",
+    Icon = "rbxassetid://71379383163961",
     IconSize = UDim2.new(0, 30, 0, 30)
 }
 
@@ -143,7 +143,7 @@ local FallbackIcons = {
     loading = "rbxassetid://116535712789945",
     close = "rbxassetid://6022668916",
     changelog = "rbxassetid://138133190015277",
-    logo = "rbxassetid://122133446845139",
+    logo = "rbxassetid://71379383163961",
     user = "rbxassetid://77400125196692",
     clock = "rbxassetid://87505349362628",
     cart = "rbxassetid://114754518183872"
@@ -152,7 +152,7 @@ local FallbackIcons = {
 local CachedIcons = {}
 local FolderPath = "Rayfield/Configurations/Abyss Hub"
 local IconsFolder = "Icons"
-local DefaultLogoAsset = "rbxassetid://95721401302279"
+local DefaultLogoAsset = "rbxassetid://71379383163961"
 
 local function isMobile()
     return UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled
