@@ -27,7 +27,7 @@ else
     StarterGui:SetCore("SendNotification", {
         Title = "Abyss Hub",
         Text = "Game not supported",
-        Icon = "rbxassetid://125920361880643"
+        Icon = "rbxassetid://125920361880643",
         Duration = 5,
     })
 
