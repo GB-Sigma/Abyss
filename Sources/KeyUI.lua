@@ -47,7 +47,7 @@ Abyss.Appearance = {
 -- links
 Abyss.Links = {
     GetKey = "",
-    Discord = ""
+    Discord = "Soon..."
 }
 
 -- storage
